@@ -5,13 +5,36 @@
 {% block body %}
     <h1>Voiture index</h1>
 
+    <h2> Nos plus belles voitures </h2>
+
+    <div class="row">
+        {# Ici je je cree une boucle afin de multiplier par 3 cette div  #}
+        {% for i in 1..3 %}
+        <div class="col">
+            <div class="card">
+                <img src="https://picsum.photos/200/200" class="" img-fluid alt="">
+                <div class="">
+                    <h4 class="card-title">The Dark Mobile</h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, architecto
+                        beatae, deleniti dolor dolorem error hic inventore ipsam laborum maxime modi nam nemo, numquam
+                        officia quis sapiente ut. Est, quos.</p>
+
+                 <a href=""><button type="button" class="btn btn-outline-dark">Details</button></a>
+                    <a href=""><button type="button" class="btn btn-outline-dark">Ajouter</button></a>
+
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
     <table class="table">
         <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nom</th>
-                <th>actions</th>
-            </tr>
+        <tr>
+            <th>Id</th>
+            <th>Nom</th>
+            <th>actions</th>
+        </tr>
         </thead>
         <tbody>
         {% for voiture in voitures %}
@@ -32,4 +55,29 @@
     </table>
 
     <a href="{{ path('voiture_new') }}">Create new</a>
+    <hr>
+
+    <h2>Un service de fou</h2>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consectetur deleniti eius hic itaque unde.</p>
+    <div class="row">
+        {# Ici avec la fonction include , je mets mon code dans le fichier assurance et
+        je cree des block fin de pouvoir modfier mes textes indepandaments #}
+    {% include"partage/_assurance.html.twig" with {
+        'color':'dark',
+        'icone':'fas fa-car',
+        'text':" Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consectetur deleniti eius hic itaque unde",
+    } %}
+        {% include"partage/_assurance.html.twig" with {
+            'color':'success',
+            'icone':'fas fa-check',
+            'text':" Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consectetur deleniti eius hic itaque unde",
+        } %}
+        {% include"partage/_assurance.html.twig" with {
+            'color':'info',
+            'icone':'fas fa-lock',
+            'text':" Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consectetur deleniti eius hic itaque unde",
+        } %}
+    </div>
+
 {% endblock %}

@@ -1,0 +1,16 @@
+
+
+
+{# Ici on cree des blocks avec les doubles accolades qui permetent
+d'afficher une varibles, le retour d'une fonction {{ maFonction() }} ou une expression complexe {{ age>18 ?'adultes':'enfants'
+ }} et les accolades {% tag %} qui permettent d'avoir une action,faire des choses
+{% for X in Y %}#}
+<div class="col">
+    <div class="card bg-{{ color }} text-white text-center">
+        <div class="card-body">
+            <i class="{{ icone }} fa-2x mb-3"></i>
+            <p class="card-tes">{{ text }}</p>
+
+        </div>
+    </div>
+</div>
