@@ -15,7 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/voiture')]
 class VoitureController extends AbstractController
 {
-    #[Route('/', name: 'voiture_index', methods: ['GET'])]
+    #[Route('/', name: 'voiture_index')]
     public function index(VoitureRepository $voitureRepository): Response
     {
         return $this->render('voiture/index.html.twig', [

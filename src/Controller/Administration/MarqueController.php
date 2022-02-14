@@ -7,6 +7,7 @@ use App\Form\MarqueType;
 use App\Repository\MarqueRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -15,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class MarqueController extends AbstractController
 {
     #[Route('/', name: 'marque_index', methods: ['GET'])]
-    public function index(MarqueRepository $marqueRepository): Response
+    public function index(MarqueRepository $marqueRepository ): Response
     {
         return $this->render('marque/index.html.twig', [
             'marques' => $marqueRepository->findAll(),
@@ -51,12 +52,16 @@ class MarqueController extends AbstractController
     }
 
     #[Route('/{id}/edit', name: 'marque_edit', methods: ['GET', 'POST'])]
-    public function edit(Request $request, Marque $marque, EntityManagerInterface $entityManager): Response
+    public function edit(Request $request, Marque $marque, EntityManagerInterface $entityManager,Telechargement $telechargement): Response
     {
         $form = $this->createForm(MarqueType::class, $marque);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $fichier=$form->get('fichier')
+                ->getData();
+            $telechargement->deplacer($fichier);
+
             $entityManager->flush();
 
             return $this->redirectToRoute('marque_index', [], Response::HTTP_SEE_OTHER);

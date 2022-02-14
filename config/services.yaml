@@ -5,6 +5,10 @@
 # https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
 parameters:
 
+    #Ici on indique le chemin ou doit etre deposer les fichiers uploadés
+#il faut creer le dossier et respecter l'arboressence
+uploads_files:'%kernel.project_dir%/public/upload'
+
 services:
     # default configuration for services in *this* file
     _defaults:
