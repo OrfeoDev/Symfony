@@ -6,8 +6,8 @@
 parameters:
 
     #Ici on indique le chemin ou doit etre deposer les fichiers uploadés
-#il faut creer le dossier et respecter l'arboressence
-uploads_files:'%kernel.project_dir%/public/upload'
+#il faut creer le dossier et respecter l'arboressence et bien respecter indentation
+    uploads_files: '%kernel.project_dir%/public/upload'
 
 services:
     # default configuration for services in *this* file
