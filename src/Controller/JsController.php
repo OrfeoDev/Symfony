@@ -11,7 +11,7 @@ class JsController extends AbstractController
     #[Route('/js', name: 'js')]
     public function index(): Response
     {
-        return $this->render('js/index.html.twig', [
+        return $this->render('js/js.html.twig', [
             'controller_name' => 'JsController',
         ]);
     }
