@@ -1,5 +1,12 @@
+// Information du navigateur
 /*console.log(navigator)
+
+//Information sur la fenetre de notre navigigateur
 console.log(window)
+// exemple recupere la page html cahrgee tous les enfants du body
+
+
+
 console.log(document)
 
 let json = {
@@ -28,6 +35,7 @@ console.log(tabJason[1].prenom)
 
 // Ici je cree un objet
 //Defer:  différer l'exécution à la fin du chargement du document, il faut le rajouter dans la balise "script"
+//creation d'un DOM d'un element div
 let div = document.createElement('div')
 div.id = 'divCree'
 div.innerText = " teste";
@@ -52,21 +60,24 @@ console.log(document.getElementById('ul'));
 
 function changeListe() {
 // let ulListOne = document.getElementById('ulListOne');
-let ulListOne = document.querySelector('#ulListOne');
+    // querySelector Permet de recuperer un element comme je le ferai en css .
+    // dans  cette exemeple je recupere l'element de ma page
+    let ulListOne = document.querySelector('#ulListOne');
 // let items = ulListOne.getElementsByTagName('li');
-let items = ulListOne.querySelectorAll('li');
+    // querySelectorAll permet de recuperer un ensemble d'element
+    let items = ulListOne.querySelectorAll('li');
 
 // ulListOne.setAttribute('type', 'circle');
-ulListOne.style.listStyleType = 'upper-roman';
+    ulListOne.style.listStyleType = 'upper-roman';
 // en css list-style-type : 'upper-roman'
 
-for (let i = 0; i < items.length; i++) {
+    for (let i = 0; i < items.length; i++) {
 
-    // items[i].setAttribute('onClick', "alert('item : '+(i+1))");
-    items[i].addEventListener('click', function () {
-        alert('item : '+(i+1));
-    })
+        // items[i].setAttribute('onClick', "alert('item : '+(i+1))");
+        items[i].addEventListener('click', function () {
+            alert('item : ' + (i + 1));
+        })
 
-    items[i].innerText = "Blabla " + (i + 1);
-}
+        items[i].innerText = "Blabla " + (i + 1);
+    }
 }
