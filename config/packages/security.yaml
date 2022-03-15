@@ -39,7 +39,7 @@ security:
        # - Attention le S de http a ete enlever volontairement afin que le site puisse fonctionner
         - { path: '^/', roles: PUBLIC_ACCESS, requires_channel: 'http' }
         - { path: ^/admin, roles: ROLE_ADMIN }
-        # - { path: ^/profile, roles: ROLE_USER }
+        - { path: ^/profile, roles: ROLE_USER }
 
 when@test:
     security:

@@ -61,7 +61,7 @@ console.log(document.getElementById('ul'));
 function changeListe() {
 // let ulListOne = document.getElementById('ulListOne');
     // querySelector Permet de recuperer un element comme je le ferai en css .
-    // dans  cette exemeple je recupere l'element de ma page
+    // dans  cet exemple je recupere l'element de ma page
     let ulListOne = document.querySelector('#ulListOne');
 // let items = ulListOne.getElementsByTagName('li');
     // querySelectorAll permet de recuperer un ensemble d'element
@@ -143,7 +143,7 @@ document.body.appendChild(container);
 cette fonction va me permettre de calculer ce que va jouer l'ordi
  */
 function ordi() {
-    //Ici je fais un arrondi et je retourne un chiffre indifini et je multiplie par 2 qui correspond au nombre de personne dans mon tableau
+    //Ici je fais un arrondi et je retourne un chiffre indefini et je multiplie par 2 qui correspond au nombre de personne dans mon tableau
     return Math.round(Math.random() * 2);
 }
 

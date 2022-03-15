@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ComposantClassController!{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script defer crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script defer crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script defer src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script defer type="text/babel" src="{{ asset('javascript/composantclass.js') }}"></script>
+
+{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+    <div id="composantClass"></div>
+{% endblock %}

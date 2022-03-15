@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les Classes{% endblock %}
+
+{% block body %}
+{{ parent() }}
+    <script defer src="{{ asset('javascript/Class.js') }}"></script>
+{% endblock %}

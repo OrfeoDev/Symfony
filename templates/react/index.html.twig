@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ReactController!{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{#Toujours mettre le script cdn en premier#}
+    <script defer crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script defer crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script defer src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+{#Ensuite le script avec les chemins#}
+    <script defer src="{{ asset('javascript/calcul.js') }}"></script>
+    <script defer type="text/babel" src="{{ asset('javascript/react.js') }}"></script>
+
+    {#    <script defer src="{{ asset('javascript/calculatrice.js') }}"></script>#}
+{% endblock %}
+
+
+
+{% block body %}
+
+    {{ parent() }}
+<div id="first"></div>
+
+    <div id="calculatriceResult" ></div>
+
+    <div id="fragment"></div>
+
+    <div id="heure"></div>
+
+
+    <diV id="bonjourSecond"></diV>
+
+<div id="resultat"></div>
+{% endblock %}

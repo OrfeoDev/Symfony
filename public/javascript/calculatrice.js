@@ -3,7 +3,7 @@ let valPremiere = Number(prompt("Entrez la premiere valeur :"));
 // On affiche uniquement la commande prompt
 let operateur = prompt("operateur :");
 let valSeconde = Number(prompt("Entrez la seconde valeur :"));
- // Un switch case permet de calculer la valeur
+ // Un switch évalue une expression et, selon le résultat obtenu et le cas associé, exécute les instructions correspondantes
 switch (operateur) {
     case '+':
         alert(valPremiere + valSeconde);

@@ -73,6 +73,11 @@ class MarqueController extends AbstractController
         ]);
     }
 
+
+
+
+
+
     #[Route('/{id}', name: 'marque_delete', methods: ['POST'])]
     public function delete(Request $request, Marque $marque, EntityManagerInterface $entityManager): Response
     {

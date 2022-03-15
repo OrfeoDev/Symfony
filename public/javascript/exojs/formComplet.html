@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>formulaire complet</title>
+
+    <script src="formComplet.js"></script>
+
+</head>
+<body>
+<form method="post" action="" novalidate>
+    <label for="nom">Entrez le nom</label>
+    <input type="text" name="nom" id="nom" minlength="3" maxlength="10" value="">
+    <select id="biere" name="biere">
+        <option value="">Choisissez votre bière</option>
+        <option value="adel">adelscott</option>
+        <option value="leffe">Leffe</option>
+        <option value="IPA" selected>leffe IPA</option>
+        <option value="IPA" selected>Leffe IPA</option>
+        <option value="jesaispas">aucune idée</option>
+    </select>
+
+    <div id="biereResult"></div>
+    <select id="cocktail" name="cocktail[]" multiple>
+        <option value="fraise" selected>fraise</option>
+        <option value="carotte">carotte</option>
+        <option value="gingembre" selected>gingembre</option>
+        <option value="tabasco" >tabasco</option>
+    </select>
+    <div id="cocktailResult"></div>
+    <label for="homme">homme</label>
+    <input type="radio" name="sexe" id="homme" value="homme" required>
+    <label for="femme">femme</label>
+    <input type="radio" name="sexe" id="femme" value="femme" required>
+    <div id="choixSexe"></div>
+    <label for="voiture">voiture</label>
+    <input type="checkbox" name="vehicule[]" value="voiture" required>
+    <label for="velo">velo</label>
+    <input type="checkbox" name="vehicule[]" checked value="velo" required>
+    <input type="checkbox" name="vehicule[]" value="trotinette" required>
+    <div id="choixVehicule"></div>
+    <button type="submit">Envoyez</button>
+</form>
+<span id="messageErreur"></span>
+
+<span id="messageErreur"></span>
+</body>
+</html>
