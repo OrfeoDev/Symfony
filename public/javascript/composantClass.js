@@ -19,16 +19,16 @@ class MonComposant extends React.Component
     render() // 2
     {
         return <>
-            <h1>L'heure est : {this.state.heure}</h1>
+            <h1 onCopy={this.noCopy}>L'heure est : {this.state.heure}</h1>
 
             <PetitComposant val="test" />
             <p>{this.props.proprieteDuCoup} {this.maPropriete}</p>
             <p>{this.props.children}</p>
 
             <p>{this.state.chiffreAleatoire}</p>
-            <button onClick="allumer"> </button>
 
-            {/*<button onClick="">ici je veux afficher allumer / eteint</button>*/}
+
+            <button onClick={this.changeLight}>ici je veux afficher allumer / eteint</button>
         </>;
     }
 
@@ -40,6 +40,13 @@ class MonComposant extends React.Component
         }, 1000);
     }
 
+ changeLight=()=>{
+        this.setSate()
+}
+
+noCopy=()=>{
+        alert('a ne pas copier');
+}
     calcRand()
     {
         this.setState({
