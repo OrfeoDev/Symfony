@@ -11,5 +11,7 @@ import './styles/app.scss';
 // start the Stimulus application
 import './bootstrap';
 
-require('boostrap');
 
+require('bootstrap');
+require('react');
+require('react-dom');

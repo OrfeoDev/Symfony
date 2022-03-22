@@ -2,15 +2,17 @@
 
 {% block title %}Hello ReactFormController!{% endblock %}
 
+
 {% block javascripts %}
     {{ parent() }}
 
-    <script defer crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script defer crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-    <script defer src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script defer type="text/babel" src="{{ asset('javascript/reactForm.js') }}"></script>
+{#    <script defer crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>#}
+{#    <script defer crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>#}
+{#    <script defer src="https://unpkg.com/@babel/standalone/babel.min.js"></script>#}
+{#    <script defer type="text/babel" src="{{ asset('javascript/reactForm.js') }}"></script>#}
 
 {% endblock %}
+
 
 {% block body %}
 
