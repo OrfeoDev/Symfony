@@ -77,6 +77,7 @@ Encore
     // uncomment if you use React
     .enableReactPreset()
     .addEntry('js/todo','./assets/js/react/todo.js')
+    .addEntry('js/hook','./assets/js/react/hookRender.js')
 
     // uncomment to get integrity="..." attributes on your script & link tags
     // requires WebpackEncoreBundle 1.4 or higher
