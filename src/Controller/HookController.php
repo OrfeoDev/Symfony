@@ -15,4 +15,12 @@ class HookController extends AbstractController
             'controller_name' => 'HookController',
         ]);
     }
+
+    #[Route('/calcul', name: 'calcul')]
+    public function cacul(): Response
+    {
+        return $this->render('calcul/index.html.twig', [
+            'controller_name' => 'CalculController',
+        ]);
+    }
 }

@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import AffichageExo from "./module/AffichageExo";
+import App from "./module/App";
 
-import Hook from "./module/Hook";
 
-
-
-ReactDOM.render(<Hook/>,document.getElementById('hook'));
+ReactDOM.render(<App/> ,document.getElementById('hook'));
