@@ -23,4 +23,12 @@ class HookController extends AbstractController
             'controller_name' => 'CalculController',
         ]);
     }
+    #[Route('/eval', name: 'eval')]
+    public function eval(): Response
+    {
+        return $this->render('eval/index.html.twig', [
+            'controller_name' => 'EvalController',
+        ]);
+    }
+
 }

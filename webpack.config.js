@@ -78,7 +78,7 @@ Encore
     .enableReactPreset()
     .addEntry('js/todo','./assets/js/react/todo.js')
     .addEntry('js/hook','./assets/js/react/hookRender.js')
-
+    .addEntry('js/eval','./assets/js/react/evalRender.js')
     // uncomment to get integrity="..." attributes on your script & link tags
     // requires WebpackEncoreBundle 1.4 or higher
     //.enableIntegrityHashes(Encore.isProduction())

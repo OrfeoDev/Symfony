@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BpmController!{% endblock %}
+
+
+
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('js/exoBpm') }}
+{% endblock %}
+
+{% block body %}
+
+    {{ parent() }}
+    <div id="exoBpm"></div>
+{% endblock %}

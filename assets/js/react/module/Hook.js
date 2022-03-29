@@ -13,35 +13,10 @@ export default function Hook() {
 
 
 
-
-
-
-
-
-
-
 let recupere =(e)=>{
         e.preventDefault()
 
 }
-
-
-
-
-    // function calculator(e) {
-    //     if ("+" === calcul) {
-    //       setResultat(monChiffre1 + monChiffre2)
-    //     }
-    //     if (calcul === "-") {
-    //        setResultat(monChiffre1 + monChiffre2)
-    //     }
-    //     if (calcul === "*") {
-    //         setResultat(monChiffre1 + monChiffre2)
-    //     }
-    //     if (calcul === "/") {
-    //         setResultat(monChiffre1 +monChiffre2)
-    //     }
-    // }
 
     // On ecrit avec une fonction fléchée
     let changeMonInput = (e) => {
@@ -49,9 +24,9 @@ let recupere =(e)=>{
     }
 // On peut le faire aussi sans fonction fléchée
 
-//     function changeMonInput (e) {
-//         setMonInput(e.target.value);
-//     }
+    // function changeMonInput (e) {
+    //     setMonInput(e.target.value);
+    // }
 
 
 

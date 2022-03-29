@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+{{ encore_entry_script_tags('js/eval') }}
+{% endblock %}
+
+{% block body %}
+
+
+
+    {{ parent() }}
+    <div id="eval"></div>
+{% endblock %}
